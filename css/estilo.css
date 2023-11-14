@@ -1,0 +1,27 @@
+h1 {
+    color: wheat;
+    padding: 1rem;
+    margin: 1rem;
+}
+#header{
+    padding: 0.5rem;
+    margin: 1rem;
+}
+#nav{
+    border-radius: 15px;
+}
+
+#cuerpo{
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+}
+
+#pieDePagina {
+    position: fixed; 
+    right: 0;
+    bottom: 0; 
+    width: 100%;
+    color: rgb(0, 0, 0);
+    background-color: rgb(247, 220, 220);
+}
