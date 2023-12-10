@@ -1,9 +1,52 @@
-$('#exampleModal').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget) // Button that triggered the modal
-  var recipient = button.data('whatever') // Extract info from data-* attributes
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-  var modal = $(this)
-  modal.find('.modal-title').text('New message to ' + recipient)
-  modal.find('.modal-body input').val(recipient)
-})
+//CREATE
+const createProd = document.getElementById('createProd')
+if (createProd) {
+  createProd.addEventListener('show.bs.modal', event => {
+        const button = event.relatedTarget
+
+        let idDelete = button.getAttribute('data-id')
+        let nombreDelete = button.getAttribute('data-nombre')
+        let descripcionDelete = button.getAttribute('data-descripcion')
+        let precioDelete = button.getAttribute('data-precio')
+        let fotoDelete = button.getAttribute('data-foto')
+
+        document.getElementById("id").value = idDelete
+        document.getElementById("nombre").value = nombreDelete
+        document.getElementById("descripcion").value = descripcionDelete
+        document.getElementById("precio").value = precioDelete
+        document.getElementById("foto").value = fotoDelete
+    })
+}
+//EDIT
+const updateModal = document.getElementById('updateModal')
+if (updateModal) {
+  updateModal.addEventListener('show.bs.modal', event => {
+        const button = event.relatedTarget
+
+        let id = button.getAttribute('id')
+        let nom = button.getAttribute('nom')
+        let desc = button.getAttribute('desc')
+        let precio = button.getAttribute('precio')
+        let foto = button.getAttribute('foto')
+
+        document.getElementById("idUpd").value = id
+        document.getElementById("nomUpd").value = nom
+        document.getElementById("descUpd").value = desc
+        document.getElementById("precioUpd").value = precio
+        document.getElementById("fotoUpd").value = foto
+    })
+}
+//DELETE
+const exampleModal = document.getElementById('exampleModal')
+if (exampleModal) {
+  exampleModal.addEventListener('show.bs.modal', event => {
+    const button = event.relatedTarget
+
+    let id = button.getAttribute('data-bs-whatever')
+    let nom = button.getAttribute('data-bs-whatever')
+    const modalBodyInput = exampleModal.querySelector('.modal-body input')
+    modalBodyInput.value = id
+
+    document.getElementById("nom").innerHTML=nom
+  })
+}

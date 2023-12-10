@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilo.css" />
+    <title>Xibo 3D</title>
+    <link rel="icon" type="image/x-icon" href="images/logox4.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Contacto</title>
+    <link rel="stylesheet" href="css/estilo.css" />
 </head>
 
 <body>
@@ -33,15 +34,16 @@
                         </ul>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="productos.php">ProductosBD</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="queEs.html">¿Qué es la impresion 3D?</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.html">
-                            <a class="nav-link" href="contacto.php">Contacto</a>
-                        </a>
+                        <a class="nav-link active" href="contacto.php">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -62,30 +64,27 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form id="contact-form" action="*****" method="post" class="img-fluid" method="post">
+                                <form action="controller/ingreso.php" method="post" class="img-fluid" method="post">
                                     <div class="form-group row" style="padding: 10px;">
-                                        <label for="inputEmail" class="col-sm-0 col-form-label">Email</label>
+                                        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
                                         <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputEmail"
-                                                placeholder="Email">
+                                            <input type="text" name="email" class="form-control" placeholder="Email">
                                         </div>
                                     </div>
                                     <div class="form-group row" style="padding: 10px;">
-                                        <label for="inputPass" class="col-sm-0 col-form-label">Password</label>
+                                        <label for="inputPass" class="col-sm-2 col-form-label">Password</label>
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="inputPass"
-                                                placeholder="Password">
+                                            <input type="text" name="pass" class="form-control" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div style="text-align:center;">
+                                            <button type="submit" class="btn btn-primary">Entrar</button>
                                         </div>
                                     </div>
                                 </form>
-
-                            </div>
-                            <div class="modal-footer">
-                                <div style="text-align:center;">
-                                    <button type="submit" class="btn btn-primary">Entrar</button>
-                                </div>
                                 <div style="text-align: right;">
-                                    <a href="ingreso.php">
+                                    <a href="registrar.php">
                                         <button type="submit" class="btn btn-outline-success">Registrate</button>
                                     </a>
                                 </div>
@@ -99,7 +98,7 @@
     </header>
     <!-- fin menu-->
     <div style="text-align:center; padding: 30px; background-color: rgba(247, 220, 220);">
-        <h1>Contacto</h1>
+        <h1 style="color: black;">Contacto</h1>
     </div>
     <div class="container position-relative" style="padding: 50px;">
         <div class="fs-5 my-8 text-align" style="background-color: rgba(211, 211, 211, 0.3);">
@@ -145,7 +144,7 @@
             </div>
         </div>
     </div>
-    
+
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Obtener datos del formulario
@@ -177,10 +176,11 @@
     }
 
     ?>
+
+    <script src="js/validacion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
         </script>
-    <script src="js/validacion.js"></script>
 </body>
 
 </html>

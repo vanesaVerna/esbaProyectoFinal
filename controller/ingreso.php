@@ -26,7 +26,7 @@ if ($user = $result->fetch_assoc()) {
 
     if ($rol === 'admin') {
     //administrado
-        header("Location: ../view/admProd.php");
+        header("Location: ../admProd.php");
         exit();
     } else {
         echo "Soy Usuario";
