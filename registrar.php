@@ -26,8 +26,13 @@
 </head>
 
 <body>
+
     <div class="container position-relative" style="padding: 50px;">
+<div style="text-align:center;">
+<h2>¡Registrate!</h2>
+</div>
         <div class="fs-5 my-8 text-align" style="background-color: rgba(211, 211, 211, 0.3);">
+
             <form id="formularioAlta" class="img-fluid" method="post">
                 <div class="form-group row" style="padding: 10px;">
                     <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
@@ -75,19 +80,20 @@
             <div id="volver-atras">
                 <button onclick="window.scrollTo(0, 0)" class="btn btn-light"
                     style="position: fixed; bottom: 20px; right: 20px;">
-                    <a href="index.php" style="text-decoration: none; color: inherit;">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
                         <img src="images/24SinFondo.png" style="width: 20px; height: 20px;"> Ir al inicio
                     </a>
                 </button>
             </div>
-            <script src="js/ingreso.js">
-            </script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-                crossorigin="anonymous">
-                </script>
         </div>
     </div>
+
+    <script src="js/ingreso.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+
 </body>
 
 </html>

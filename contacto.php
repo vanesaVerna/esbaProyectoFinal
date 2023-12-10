@@ -39,7 +39,7 @@
                         <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.php">
+                        <a href="index.html">
                             <a class="nav-link" href="contacto.php">Contacto</a>
                         </a>
                     </li>
@@ -62,7 +62,7 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form id="contact-form" class="img-fluid" method="post">
+                                <form id="contact-form" action="*****" method="post" class="img-fluid" method="post">
                                     <div class="form-group row" style="padding: 10px;">
                                         <label for="inputEmail" class="col-sm-0 col-form-label">Email</label>
                                         <div class="col-sm-10">
@@ -138,15 +138,15 @@
             <div id="volver-atras">
                 <button onclick="window.scrollTo(0, 0)" class="btn btn-light"
                     style="position: fixed; bottom: 20px; right: 20px;">
-                    <a href="index.php" style="text-decoration: none; color: inherit;">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
                         <img src="images/24SinFondo.png" style="width: 20px; height: 20px;"> Ir al inicio
                     </a>
                 </button>
             </div>
         </div>
     </div>
+    
     <?php
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Obtener datos del formulario
         $nombre = $_POST['inputNombre'];
