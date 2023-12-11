@@ -26,74 +26,68 @@
 </head>
 
 <body>
-
     <div class="container position-relative" style="padding: 50px;">
-<div style="text-align:center;">
-<h2>¡Registrate!</h2>
-</div>
-        <div class="fs-5 my-8 text-align" style="background-color: rgba(211, 211, 211, 0.3);">
-
-            <form id="formularioAlta" class="img-fluid" method="post">
+        <div style="text-align:center;">
+            <h2>¡Registrate!</h2>
+        </div>
+        <div class="fs-5 my-8 text-align" style="background-color: rgba(211, 211, 211, 0.3);" id="createUsu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <form action="controller/createNuevoUsu.php" method="post" onsubmit="return validateForm()" class="img-fluid">
                 <div class="form-group row" style="padding: 10px;">
-                    <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
+                <div id="nom"></div>
+                <input type="hidden" class="form-control" id="id" name="id">
+                    <label for="inputId" class="col-sm-2 col-form-label">Nombre<span style="color: red;">*</span></label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputNombre" placeholder="Nombre">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
                     </div>
                 </div>
                 <div class="form-group row" style="padding: 10px;">
-                    <label for="inputApellido" class="col-sm-2 col-form-label">Apellido</label>
+                    <label for="inputApe" class="col-sm-2 col-form-label">Apellido<span style="color: red;">*</span></label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputApellido" placeholder="Apellido">
+                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" required>
                     </div>
                 </div>
                 <div class="form-group row" style="padding: 10px;">
-                    <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                    <label for="inputEmail" class="col-sm-2 col-form-label">Email<span style="color: red;">*</span></label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
                     </div>
                 </div>
                 <div class="form-group row" style="padding: 10px;">
-                    <label for="inputPass" class="col-sm-2 col-form-label">Password</label>
+                    <label for="inputPass" class="col-sm-2 col-form-label">Password<span style="color: red;">*</span></label>
                     <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPass" placeholder="Password">
+                        <input type="password" class="form-control" id="pass" name="pass" placeholder="Password" required>
+                    </div>
+                </div>
+                <div class="form-group row" style="padding: 10px;">
+                    <label for="inputRol" class="col-sm-2 col-form-label">Rol</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="rol" name="rol" placeholder="Rol" value="usuario"
+                            readonly>
                     </div>
                 </div>
                 <div style="text-align:center;">
-                    <button type="button" class="btn btn-primary" onclick="validarAlta()">Enviar</button>
-                    <div id="alertaExito" style="display: none;">
-                        <div class="alert alert-success d-flex align-items-center" role="alert">
-                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
-                                <use xlink:href="#check-circle-fill" />
-                            </svg>
-                            <div>
-                                ¡Ya estas registrado!
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <button type="submit" class="btn btn-primary create-user-btn" data-bs-toggle='modal' data-bs-target='#createUsu' data-bs-dismiss="modal" aria-label="Close">
+                        Crear Usuario
+                    </button>
             </form>
-            <div>
-                <img src="images/fondo rombos multicolores.png" class="img-fluid" alt="logo"
-                    style="position: absolute; right: 0; top: 0; z-index: -50; opacity: 0.1; width: 110%; height: auto;">
-            </div>
-
-            <div id="volver-atras">
-                <button onclick="window.scrollTo(0, 0)" class="btn btn-light"
-                    style="position: fixed; bottom: 20px; right: 20px;">
-                    <a href="index.html" style="text-decoration: none; color: inherit;">
-                        <img src="images/24SinFondo.png" style="width: 20px; height: 20px;"> Ir al inicio
-                    </a>
-                </button>
-            </div>
+        </div>
+        <div>
+            <img src="images/fondo rombos multicolores.png" class="img-fluid" alt="logo"
+                style="position: absolute; right: 0; top: 0; z-index: -50; opacity: 0.1; width: 110%; height: auto;">
+        </div>
+        <div id="volver-atras">
+            <button onclick="window.scrollTo(0, 0)" class="btn btn-light"
+                style="position: fixed; bottom: 20px; right: 20px;">
+                <a href="index.php" style="text-decoration: none; color: inherit;">
+                    <img src="images/24SinFondo.png" style="width: 20px; height: 20px;"> Ir al inicio
+                </a>
+            </button>
         </div>
     </div>
-
-    <script src="js/ingreso.js">
-    </script>
+    </div>
+    <script src="js/validacion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-    </script>
-
+        </script>
 </body>
-
 </html>

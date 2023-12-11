@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+   <!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,96 +10,8 @@
     <title>Productos</title>
 </head>
 
-<body>
-    <!-- menu -->
-    <header id="header">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="nav">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="true">Productos</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="producto.html#1"
-                                    onclick="mostrarProducto('1');">Llaveros</a></li>
-                            <li><a class="dropdown-item" href="producto.html#2"
-                                    onclick="mostrarProducto('2');">Soportes</a></li>
-                            <li><a class="dropdown-item" href="producto.html#3" onclick="mostrarProducto('3');">Trabajos
-                                    a pedido</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="productos.php">ProductosBD</a>
-                    </li>
-                    <li class="nav-item">
-                    <li class="nav-item">
-                        <a class="nav-link" href="queEs.html">¿Qué es la impresion 3D?</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.php">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Ingreso -->
-            <div class="img-fluid" style="padding-top: 0px;">
-                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-                    Ingresar
-                </button>
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Ingresar</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form id="contact-form" class="img-fluid" method="post">
-                                    <div class="form-group row" style="padding: 10px;">
-                                        <label for="inputEmail" class="col-sm-0 col-form-label">Email</label>
-                                        <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputEmail"
-                                                placeholder="Email">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row" style="padding: 10px;">
-                                        <label for="inputPass" class="col-sm-0 col-form-label">Password</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="inputPass"
-                                                placeholder="Password">
-                                        </div>
-                                    </div>
-                                </form>
-
-                            </div>
-                            <div class="modal-footer">
-                                <div style="text-align:center;">
-                                    <button type="submit" class="btn btn-primary">Entrar</button>
-                                </div>
-                                <div style="text-align: right;">
-                                    <a href="ingreso.php">
-                                        <button type="submit" class="btn btn-outline-success">Registrate</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- fin ingreso -->
-        </nav>
-    </header>
-    <!-- fin menu-->
+<body>-->
+    <!-- menu 
     <div id="body">
         <div class="row row-cols-1 row-cols-md-2 g-4">
             <div id="1" class="card text-center mx-auto" style="display: none; width: 1000px;">
@@ -184,7 +96,7 @@
         <div id="volver-atras">
             <button onclick="window.scrollTo(0, 0)" class="btn btn-light"
                 style="position: fixed; bottom: 20px; right: 20px;">
-                <a href="index.html" style="text-decoration: none; color: inherit;">
+                <a href="index.php" style="text-decoration: none; color: inherit;">
                     <img src="images/24SinFondo.png" style="width: 20px; height: 20px;"> Ir al inicio
                 </a>
             </button>
@@ -193,4 +105,4 @@
     </div>
 </body>
 
-</html>
+</html>-->

@@ -9,178 +9,125 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilo.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- menu -->
-    <header id="header">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="nav">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="true">Productos</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="producto.html#1"
-                                    onclick="mostrarProducto('1');">Llaveros</a></li>
-                            <li><a class="dropdown-item" href="producto.html#2"
-                                    onclick="mostrarProducto('2');">Soportes</a></li>
-                            <li><a class="dropdown-item" href="producto.html#3" onclick="mostrarProducto('3');">Trabajos
-                                    a pedido</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="productos.php">ProductosBD</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="queEs.html">¿Qué es la impresion 3D?</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contacto.php">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Ingreso -->
-            <div class="img-fluid" style="padding-top: 0px;">
-                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-                    Ingresar
-                </button>
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Ingresar</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form action="controller/ingreso.php" method="post" class="img-fluid" method="post">
-                                    <div class="form-group row" style="padding: 10px;">
-                                        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" name="email" class="form-control" placeholder="Email">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row" style="padding: 10px;">
-                                        <label for="inputPass" class="col-sm-2 col-form-label">Password</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" name="pass" class="form-control" placeholder="Password">
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <div style="text-align:center;">
-                                            <button type="submit" class="btn btn-primary">Entrar</button>
-                                        </div>
-                                    </div>
-                                </form>
-                                <div style="text-align: right;">
-                                    <a href="registrar.php">
-                                        <button type="submit" class="btn btn-outline-success">Registrate</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- fin ingreso -->
-        </nav>
-    </header>
+    <?php include 'menu.php'; ?>
     <!-- fin menu-->
     <div style="text-align:center; padding: 30px; background-color: rgba(247, 220, 220);">
         <h1 style="color: black;">Contacto</h1>
     </div>
-    <div class="container position-relative" style="padding: 50px;">
-        <div class="fs-5 my-8 text-align" style="background-color: rgba(211, 211, 211, 0.3);">
-            <form id="contact-form" class="img-fluid" method="post" action="enviar_correo.php">
-                <div class="form-group row" style="padding: 10px;">
-                    <label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputNombre" placeholder="Nombre">
+
+    <div class="container position-relative" style="padding: 20px;">
+        <div>
+            <div class="container text-center">
+                <div data-aos="fade-right" data-aos-duration="2000">
+                    <div class="row" style="margin-bottom: 20px; padding: 10px">
+                        <div class="col">
+                            <img src="images/contacto1.png" class="img-fluid" alt="entrega"
+                                style="transform: scale(0.8); display: block; margin: 0 auto;">
+                        </div>
                     </div>
                 </div>
-                <div class="form-group row" style="padding: 10px;">
-                    <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                <div data-aos="fade-left" data-aos-duration="2000">
+                    <div class="row" style="margin-bottom: 20px; padding: 10px">
+                        <div class="col">
+                            <img src="images/contacto2.png" class="img-fluid" alt="horarios"
+                                style="transform: scale(0.8); display: block; margin: 0 auto;">
+                        </div>
                     </div>
                 </div>
-                <div class="form-group row" style="padding: 10px;">
-                    <label for="inputDescripcion" class="col-sm-2 col-form-label">Descripción</label>
-                    <div class="col-sm-10">
-                        <textarea class="form-control" id="inputDescripcion" placeholder="Descripción"
-                            rows="4"></textarea>
-                    </div>
-                </div>
-                <div class="mb-5" style="padding: 10px;">
-                    <label for="exampleFormControlFile1" class="col-sm-2 col-form-label"></label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                </div>
-                <div style="text-align:center;">
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </div>
-            </form>
+            </div>
             <div>
                 <img src="images/fondo rombos multicolores.png" class="img-fluid" alt="logo"
                     style="position: absolute; right: 0; top: 0; z-index: -50; opacity: 0.1; width: 110%; height: auto;">
             </div>
+
             <div id="volver-atras">
                 <button onclick="window.scrollTo(0, 0)" class="btn btn-light"
                     style="position: fixed; bottom: 20px; right: 20px;">
-                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <a href="index.php" style="text-decoration: none; color: inherit;">
                         <img src="images/24SinFondo.png" style="width: 20px; height: 20px;"> Ir al inicio
                     </a>
                 </button>
             </div>
         </div>
     </div>
+    <!-- Redes con links-->
+    <div class="d-flex justify-content-center id="contacto" style="display: flex; align-items: center;">
+        <div id="Ubicacion" style="display: flex; align-items: center; margin-right: 30px;">
+            <i class="bi bi-geo-alt"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-geo-alt"
+                viewBox="0 0 16 16">
+                <path
+                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+            </svg>
+            <a href=https://maps.app.goo.gl/KmryxQEJGDBDZBLo9
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                <p style="margin-left: 8px;">Como llegar</p>
+        </div>
 
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Obtener datos del formulario
-        $nombre = $_POST['inputNombre'];
-        $email = $_POST['inputEmail'];
-        $descripcion = $_POST['inputDescripcion'];
+        <div id="WhatsApp" style="display: flex; align-items: center; margin-right: 30px;">
+            <i class="bi bi-whatsapp"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-whatsapp"
+                viewBox="0 0 16 16">
+                <path
+                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            </svg>
+            <a href=https://wa.me/5491164583428/
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                <p style="margin-left: 8px;">Mensaje Directo</p>
+        </div>
 
-        // Configurar destinatario
-        $destinatario = 'xibo3d@hotmail.com';
+        <div id="Instagram" style="display: flex; align-items: center; margin-right: 30px;">
+            <i class="bi bi-instagram"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-instagram"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+            </svg>
+            <a href=https://www.instagram.com/xibo3d
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                <p style="margin-left: 8px;">Lo ultimo</p>
+        </div>
 
-        // Asunto y contenido del correo
-        $asunto = 'Nuevo mensaje de contacto';
-        $mensaje = "Nombre: $nombre\n";
-        $mensaje .= "Email: $email\n";
-        $mensaje .= "Descripción: $descripcion\n";
+        <div id="Facebook" style="display: flex; align-items: center; margin-right: 30px;">
+            <i class="bi bi-facebook"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook"
+                viewBox="0 0 16 16">
+                <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+            </svg>
+            <a href=https://www.facebook.com/xibo.tresd
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                <p style="margin-left: 8px;">Más redes</p>
+        </div>
 
-        // Cabeceras del correo
-        $cabeceras = "From: $email";
-
-        // Enviar el correo
-        mail($destinatario, $asunto, $mensaje, $cabeceras);
-
-        // Puedes redirigir a una página de éxito o mostrar un mensaje aquí
-        echo "Correo enviado con éxito";
-    } else {
-        // Redirigir si se intenta acceder directamente al archivo PHP
-        header("Location: index.html");
-        exit();
-    }
-
-    ?>
-
+        <div id="Envio de mail" style="display: flex; align-items: center; margin-right: 30px;">
+            <i class="bi bi-envelope-open"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-envelope-open" viewBox="0 0 16 16">
+                <path
+                    d="M8.47 1.318a1 1 0 0 0-.94 0l-6 3.2A1 1 0 0 0 1 5.4v.817l5.75 3.45L8 8.917l1.25.75L15 6.217V5.4a1 1 0 0 0-.53-.882l-6-3.2ZM15 7.383l-4.778 2.867L15 13.117zm-.035 6.88L8 10.082l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738ZM1 13.116l4.778-2.867L1 7.383v5.734ZM7.059.435a2 2 0 0 1 1.882 0l6 3.2A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765l6-3.2" />
+            </svg>
+            <a href="mailto:xibo3d@hotmail.com?subject=Nuevo mensaje de contacto&body=Nombre:%0DEmail:%0DDescripción:"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                <p style="margin-left: 8px;">Contactanos vía mail</p>
+            </a>
+        </div>
+    </div>
+    <!-- FINRedes con links-->
     <script src="js/validacion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
         </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- animacion -->
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
